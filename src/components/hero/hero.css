@@ -1,0 +1,263 @@
+.hero {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.hSection {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.hTitle {
+  margin-top: 35px;
+  font-size: 80px;
+  color: pink;
+}
+.hTitle span {
+  color: white;
+}
+.awards {
+  width: 50%;
+}
+.awards p {
+  font-size: 18px;
+  color: #ddd;
+  margin: 15px 0;
+}
+.awardList {
+  display: flex;
+  gap: 8px;
+}
+.awardList img {
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  background: white;
+  border-radius: 100%;
+}
+.scroll {
+  margin-bottom: 50px;
+  width: max-content;
+}
+.right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.followTextContainer {
+  width: 20px;
+  height: 20px;
+}
+.follow {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: #2f204e;
+  border-bottom-right-radius: 10px;
+  width: max-content;
+}
+.follow img {
+  width: 20px;
+  height: 20px;
+}
+
+.followText {
+  background-color: #dd4c62;
+  font-size: 12px;
+  rotate: 90deg;
+  width: max-content;
+  height: 100%;
+  padding: 0 8px;
+  transform-origin: left top;
+  transform: translateY(-20px);
+  display: flex;
+  align-items: center;
+  border-bottom-right-radius: 10px;
+}
+.bubbleContainer {
+  display: flex;
+  align-items: end;
+  width: 50%;
+  gap: 8px;
+  justify-content: space-between;
+}
+.bubble {
+  width: 100%;
+  height: 100px;
+  background: white;
+  color: #555;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 20px 20px 0 20px;
+}
+.bubbleContainer img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  background: #dd4c62;
+  border-radius: 100%;
+}
+.certificate {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  line-height: 25px;
+  font-weight: 700;
+  color: #ddd;
+}
+.certificate img {
+  width: 100px;
+  height: 100px;
+}
+.certificate p {
+  width: 50%;
+  font-size: 12px;
+  font-weight: 400;
+}
+.contactLink {
+  margin-bottom: 50px;
+  position: relative;
+}
+.circleText {
+  letter-spacing: 3px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.hImg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 80%;
+  width: max-content;
+}
+.hImg img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1536px) {
+  .hTitle {
+    font-size: 72px;
+  }
+}
+@media (max-width: 1280px) {
+  .bg {
+    height: 70%;
+    top: auto;
+    bottom: 0;
+  }
+  .hImg {
+    height: 100%;
+  }
+  .certificate img {
+    width: 80px;
+    height: 80px;
+  }
+  .certificate p {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .bubbleContainer {
+    width: 60%;
+  }
+}
+@media (max-width: 1024px) {
+  .hTitle {
+    font-size: 48px;
+  }
+  .bg {
+    height: 50%;
+  }
+  .bubbleContainer {
+    width: 100%;
+  }
+  .contactLink {
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hSection {
+    width: 100%;
+  }
+  .hSection.left {
+    align-items: center;
+    text-align: center;
+    gap: 36px;
+  }
+  .hTitle {
+    font-style: 48px;
+  }
+  .awards {
+    width: 100%;
+  }
+  .awardList {
+    justify-content: center;
+  }
+  .bubbleContainer,
+  .follow,
+  .certificate {
+    display: none;
+  }
+  .hSection.right {
+    justify-content: end;
+  }
+}
+@media (max-width: 440px) {
+  .contactButton svg {
+    width: 70px;
+    height: 70%;
+  }
+  .hTitle {
+    font-size: 32px;
+  }
+  .awards h2 {
+    width: 100%;
+    font-size: 18px;
+  }
+  .awards p {
+    font-style: 10px;
+  }
+  .arrow {
+    width: 40%;
+  }
+}
