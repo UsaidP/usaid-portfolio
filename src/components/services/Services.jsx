@@ -4,7 +4,10 @@ import ComputerModalContainer from "./Computer/ComputerModalContainer.jsx";
 const Services = () => {
   return (
     <div className='service'>
-      <ComputerModalContainer />
+      <div className='sService left'></div>
+      <div className='sService right'>
+        <ComputerModalContainer />
+      </div>
     </div>
   );
 };

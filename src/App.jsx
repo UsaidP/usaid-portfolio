@@ -6,9 +6,9 @@ import Contact from "./components/contact/Contact.jsx";
 const App = () => {
   return (
     <div className='container'>
-      <section id='home'>
+      {/* <section id='home'>
         <Hero />
-      </section>
+      </section> */}
       <section id='services'>
         <Services />
       </section>
