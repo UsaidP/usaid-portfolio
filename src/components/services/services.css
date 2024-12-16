@@ -1,2 +1,22 @@
 .service {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  position: absolute;
+}
+.sSection {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sTitle {
+  font-style: 88px;
+  margin-bottom: 25px;
+}
+.serviceList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }

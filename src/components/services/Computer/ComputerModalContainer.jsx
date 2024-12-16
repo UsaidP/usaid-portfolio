@@ -5,12 +5,12 @@ import { Macbook } from "./Macbook";
 const ComputerModalContainer = () => {
   return (
     <Canvas>
-      <Suspense fallback={"Loading.."}>
-        <Stage environment='forest' intensity={0.5}>
+      <Suspense fallback={"Loading..."}>
+        <Stage environment="sunset" intensity={0.5}>
           <Macbook />
         </Stage>
-        <OrbitControls enableZoom={false} autoRotate />
-        <PerspectiveCamera position={[-5, -5, -5]} zoom={0.2} />
+        <OrbitControls autoRotate />
+        <PerspectiveCamera position={[-1, 0, 1.8]} zoom={0.8} makeDefault />
       </Suspense>
     </Canvas>
   );
