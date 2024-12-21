@@ -1,0 +1,35 @@
+.counter {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #dd4c62;
+}
+.pcounter {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .counter {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .pcounter {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  .text {
+    font-size: 14px;
+  }
+}
