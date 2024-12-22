@@ -1,5 +1,5 @@
 .portfolio {
-  width: 500vh;
+  width: 600vh;
   position: relative;
 }
 .pList {
@@ -36,6 +36,14 @@
 }
 .pItem:nth-child(6) {
   background: linear-gradient(to right, #4a1785, #12071f);
+}
+.pProgress {
+  position: sticky;
+  height: 80px;
+  width: 80px;
+  background-color: white;
+  bottom: 80%;
+  left: 0;
 }
 .pImage {
   width: 40%;
