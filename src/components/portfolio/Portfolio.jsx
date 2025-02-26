@@ -1,6 +1,6 @@
-import { motion, useInView, useScroll, useTransform } from "motion/react";
 import "./portfolio.css";
 import { useEffect, useRef, useState } from "react";
+import { motion, useInView, useScroll, useTransform } from "motion/react";
 
 const items = [
   {
@@ -104,14 +104,22 @@ const PortfolioItem = ({ item }) => {
 
 const Portfolio = () => {
   const [containerDistance, setContainerDistance] = useState(0);
-  const ref = useRef();
+  const ref = useRef(null);
 
   useEffect(() => {
-    if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      setContainerDistance(rect.left);
-    }
-  }, [ref]);
+    const handleResize = () => {
+      if (ref.current) {
+        const rect = ref.current.getBoundingClientRect();
+        setContainerDistance(rect.left);
+        console.log(rect);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Initialize on mount
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const { scrollYProgress } = useScroll({ target: ref });
   const xTranslate = useTransform(
@@ -119,6 +127,7 @@ const Portfolio = () => {
     [0, 1],
     [0, -window.innerWidth * items.length]
   );
+  console.log(window.innerWidth - containerDistance);
 
   return (
     <div className="portfolio" ref={ref}>
@@ -145,15 +154,17 @@ const Portfolio = () => {
             cy="80"
             r="70"
             fill="none"
-            stroke="#333"
+            stroke="#949494"
             strokeWidth={20}
           />
-          <circle
+          <motion.circle
             cx="80"
             cy="80"
             r="70"
             fill="none"
-            stroke="#333"
+            stroke="pink"
+            style={{ pathLength: scrollYProgress }}
+            transform="rotate(-90 80 80)"
             strokeWidth={20}
           />
         </svg>

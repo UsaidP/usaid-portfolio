@@ -5,7 +5,6 @@ import PsModalContainer from "./ps5/psModalContainer.jsx";
 import MugModalContainer from "./mug/MugModalContainer.jsx";
 import Counter from "./Counter/Counter.jsx";
 import { motion, useInView } from "motion/react";
-import { Macbook } from "./computer/Macbook.jsx";
 
 const services = [
   { id: 1, image: "./service1.png", title: "Web Development", counter: 50 },
@@ -85,11 +84,11 @@ const Services = () => {
 
       <div className="sService right">
         {servicesId === 1 ? (
-          <PsModalContainer />
+          <ComputerModalContainer />
         ) : servicesId === 2 ? (
           <MugModalContainer />
         ) : (
-          <ComputerModalContainer />
+          <PsModalContainer />
         )}
       </div>
     </div>

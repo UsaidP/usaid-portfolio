@@ -41,7 +41,6 @@
   position: sticky;
   height: 80px;
   width: 80px;
-  background-color: white;
   bottom: 80%;
   left: 0;
 }
@@ -72,11 +71,46 @@
 
 .pText button {
   font-size: 16px;
-  padding: 10px;
+  padding: 15px;
   background-color: pink;
   border-radius: 10px;
   border: none;
   font-weight: 500;
   margin-top: 10px;
   cursor: pointer;
+}
+
+@media (max-width: 1536px) {
+  .pItem {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .pItem h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pItem {
+    flex-direction: column;
+  }
+  .pImage,
+  .pText {
+    width: 70%;
+  }
+  .pProgress {
+    bottom: 100px;
+    left: 80%;
+  }
+}
+@media (max-width: 786px) {
+  .pItem {
+  }
+}
+@media (max-width: 440px) {
+  .pItem {
+    margin-left: 100px;
+  }
 }

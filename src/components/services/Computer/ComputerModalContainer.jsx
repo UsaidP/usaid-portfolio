@@ -10,7 +10,7 @@ const ComputerModalContainer = () => {
           <Macbook />
         </Stage>
         <OrbitControls autoRotate />
-        <PerspectiveCamera position={[-1, 0, 1.8]} zoom={0.8} makeDefault />
+        <PerspectiveCamera position={[-1, 0, 1.8]} zoom={0.7} makeDefault />
       </Suspense>
     </Canvas>
   );

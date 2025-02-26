@@ -12,7 +12,7 @@ const PsModalContainer = () => {
         </Stage>
       </Suspense>
       <OrbitControls enableZoom={false} autoRotate />
-      <PerspectiveCamera position={(1, 1, 2)} zoom={0.8} makeDefault />
+      <PerspectiveCamera position={(1, 1, 2)} zoom={0.4} makeDefault />
     </Canvas>
   );
 };
